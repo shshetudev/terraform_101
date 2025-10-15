@@ -50,7 +50,7 @@ resource "aws_s3_bucket_acl" "s3_bucket" {
 resource "aws_s3_bucket_policy" "s3_bucket" {
   bucket = aws_s3_bucket.s3_bucket.id
 
-  policy = jsondecode({
+  policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
       {
